@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="Object Oriented Programming/Object Oriented Programming.vcxproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x64" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Object Oriented Programming/matrix.cpp">
+    <Files>
+      <File FileName="Object Oriented Programming/matrix.cpp" Line="27" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
