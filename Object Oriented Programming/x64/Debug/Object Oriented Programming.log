@@ -1,0 +1,3 @@
+﻿  matrix.cpp
+c:\users\spaceman\desktop\oop\object oriented programming\matrix.cpp(81): warning C4101: 'j': unreferenced local variable
+  Object Oriented Programming.vcxproj -> C:\Users\Spaceman\Desktop\oop\x64\Debug\Object Oriented Programming.exe

@@ -66,6 +66,18 @@ double* readTXT(char *fileName, int sizeR, int sizeC)
 		
 		return data;
 }
-				
+
+void WritePGM(char *filename, double *data, int sizeR, intsizeC, int Q)
+{
+
+	int i, j;
+	unsigned char *image;
+	ofstream myfile;
+
+	image = (unsigned char *) new unsigned char[sizeR*sizeC];
+
+	for (i = 0; i < sizeR*sizeC; i++)
+
+}
 	
 }
