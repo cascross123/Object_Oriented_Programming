@@ -2,7 +2,7 @@
 	source.cpp
 */
 #include <iostream>
-#include "testMatrix.h"
+
 #include "Matrix.h"
 
 Matrix add(Matrix& one, Matrix& two);
