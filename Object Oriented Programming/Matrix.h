@@ -54,7 +54,7 @@ public:
 /*
 //create output logo matrix
 
-get block
+//get block
 write for loop
 loop each tile in noisy, create block
 

@@ -38,12 +38,15 @@ int main() //declares the main section
 
 	Matrix output_image(M, N);
 
+	moisy_matrix.getblock(0, 31, 0, 31);
+    
+    shuffled_matrix.getblock(0, 31, 0, 31);
 	
 	
-	Matrix shuffled_matrix getBlock(int start_row, int end_row, int start_column, int end_column)
-	{
-
-	}
+	
+	
+	
+	
 	/* 	Here lies the code for unshuffling the image and making it work
 
 	getBlock(int start_row, int end_row, int start_column, int end_column)
