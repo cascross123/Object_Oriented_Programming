@@ -38,7 +38,12 @@ int main() //declares the main section
 
 	Matrix output_image(M, N);
 
+	
+	
+	Matrix shuffled_matrix getBlock(int start_row, int end_row, int start_column, int end_column)
+	{
 
+	}
 	/* 	Here lies the code for unshuffling the image and making it work
 
 	getBlock(int start_row, int end_row, int start_column, int end_column)
