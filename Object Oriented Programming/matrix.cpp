@@ -74,6 +74,49 @@ Matrix Matrix::operator+(const Matrix& other)
 	return temp;
 }
 
+ 	int Matrix::getSS()
+{
+	
+	Matrix temp;
+	temp._M = this._M;
+	temp._N = this._N;
+
+	temp._data = new double[temp._M*temp._N];
+
+	for (int x = 0; x < (temp._M*temp._N); x++)
+	{
+	temp._data = this.data * this.data;
+	}
+	int total = 0;
+	
+	for (int x = 0; x< (temp._M*temp._N); x++)
+	{
+		total += temp._data[x];
+		
+	}
+
+	return total;
+}
+
+
+
+Matrix Matrix::operator-(const Matrix& other)
+{
+	std::cout << "Operator '-' overload" << std::endl;
+	Matrix temp;
+	temp._M = other._M;
+	temp._N = other._N;
+
+	temp._data = new double[temp._M*temp._N];
+
+	for (int x = 0; x < (temp._M*temp._N); x++)
+	{
+		temp._data[x] = this->_data[x] - other._data[x];
+	}
+
+	return temp;
+}
+
 Matrix Matrix::operator=(const Matrix& other)
 {
 	std::cout << "Operator '=' overload" << std::endl;

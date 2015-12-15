@@ -38,9 +38,42 @@ int main() //declares the main section
 
 	Matrix output_image(M, N);
 
-	moisy_matrix.getblock(0, 31, 0, 31);
+	noisy_matrix.getblock(0,31,0,31)
+	
+	
+	for (int i = 0; i < 16*16; i++)
+	
+	{
+		Matrix referenceblock = noisy_matrix.getblock((i - (i % 16)) * 2, (i - (i % 16)) * 2 + 31, (i * 32) % M, (i * 32) % M + 31);
+		Matrix tempblock = shuffled_matrix.getblock ((i - (i % 16)) * 2, (i - (i % 16)) * 2 + 31, (i * 32) % M, (i * 32) % M + 31);
+		
+		for (int j = i+1;  j < 16*16; j++)
+		
+		{
+			matrix testBlock = shuffledlogo.getBlock ((i - (i % 16)) * 2, (i - (i % 16)) * 2 + 31, (i * 32) % M, (i * 32) % M + 31)
+			
+			int testSqrDiff = (referenceblock-testblock).getSS();
+			int tempSqrDiff = (referenceblock-tempblock).getSS();
+			
+			if (testSqrDiff <= tempSqrDiff)
+			
+			{
+				tempblock = testblock
+				output_image.setblock ((i - (i % 16)) * 2, (i - (i % 16)) * 2 + 31, (i * 32) % M, (i * 32) % M + 31, tempblock)
+				
+			}
+			
+		}
+	
+	}
+	
+	
+	
+	//block from noisy, block from shuffled, loop through shuffled, setblock
+	
+	//i=0 i=<16 i++
     
-    shuffled_matrix.getblock(0, 31, 0, 31);
+    shuffled_matrix.getblock(0,31,0,31)
 	
 	
 	
@@ -61,7 +94,7 @@ int main() //declares the main section
 	Will save as a .pgm format, which can be read as a normal image*/
 
 	int Q = 255;
-	WritePGM(outputFileName, shuffled_input_data, M, N, Q);
+	WritePGM(outputFileName, output_image.getData(), M, N, Q);
 
 	delete[] shuffled_input_data;
 	delete[] noisy_input_data; //Deletes the stored data to save on memory usage
