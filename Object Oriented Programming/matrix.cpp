@@ -22,6 +22,12 @@ Matrix::Matrix()
 
 }
 
+Matrix::Matrix(int M, int N)
+{
+
+
+}
+
 Matrix::Matrix(int sizeR, int sizeC, double* input_data)
 {
 	_M = sizeR;
@@ -138,7 +144,7 @@ Matrix Matrix::getBlock(int start_row, int end_row, int start_column, int end_co
 
 Matrix Matrix::add(const Matrix& other)
 {
-	//create temporary array of row*colum size
+	//create temporary array of row*column size
 	double* data = new double[other._M*other._N];
 
 	//fill the array with other._data

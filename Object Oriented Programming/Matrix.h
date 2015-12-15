@@ -19,6 +19,8 @@ public:
 
 	Matrix();
 
+	Matrix(int M, int N);
+
 	Matrix(int sizeR, int sizeC, double* input_data);
 
 	//copy constructor
@@ -47,3 +49,27 @@ public:
 	~Matrix();
 
 };
+
+
+/*
+//create output logo matrix
+
+get block
+write for loop
+loop each tile in noisy, create block
+
+
+temp block from noisy image
+test block from shuffled image
+set block
+
+if temp < test 
+
+{
+
+tempBlock = testBlock
+
+}
+
+output logo.setblock (tempblock);
+*/
